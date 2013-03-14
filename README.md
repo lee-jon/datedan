@@ -1,3 +1,3 @@
-# Shell for DateDanTM the amazing dan dating website
+# Shell for DateDanTM the amazing\* dan dating website
 
-As written by Lee-Jon of Alliants fame.
+* also a web app for trolling Dan Hubbard
