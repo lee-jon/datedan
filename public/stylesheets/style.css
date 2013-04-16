@@ -1,7 +1,17 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #000 url("/images/fireworks.gif") center center repeat;
 }
 a {
   color: #00b7ff;
+}
+#wrapper {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 900px;
+  padding: 20px;
+}
+#wrapper img {
+  width: 900px;
 }
