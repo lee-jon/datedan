@@ -14,7 +14,56 @@
   </div>
   <script type="text/javascript" src="/javascripts/k.js"></script>
   <script type="text/javascript">
-  	var konami = new Konami('http://www.google.com');
+  	var dan_code = function() {
+        var img, left, top, counter, interval;
+
+        img = document.createElement('img');
+
+        img.src = "images/transdan.png";
+
+        left = 100;
+        top  = 250;
+        img.style.position = "absolute";
+        img.style.left = left + "px";
+        img.style.top = top + "px";
+        img.style.width = "800px";  // Make these match the image...
+        img.style.height = "868px"; // ...or leave them out.
+
+        img.style.zIndex = 100;
+
+        document.body.appendChild(img);
+
+        counter = 20;
+        interval = 200; // ms
+        window.setTimeout(wanderAround, interval);
+
+        function wanderAround() {
+
+            --counter;
+            if (counter < 0)
+            {
+                document.body.removeChild(img);
+            }
+            else
+            {
+                left += Math.floor(Math.random() * 20) - 10;
+                if (left < 0)
+                {
+                    left = 0;
+                }
+                top  += Math.floor(Math.random() * 10)  - 5;
+                if (top < 0)
+                {
+                    top = 0;
+                }
+                img.style.left = left + "px";
+                img.style.top  = top  + "px";
+
+                window.setTimeout(wanderAround, interval);
+            }
+        }
+    }
+  	var konami = new Konami(dan_code);
   </script>
   </body>
 </html>
